@@ -32,6 +32,12 @@ h2 {
 
 img {
    width: 150px;
+   opacity: 60%;
+}
+
+img:hover {
+   opacity: 100%;
+   cursor: pointer;
 }
 
 .center {
@@ -39,8 +45,14 @@ img {
 }
 
 .grid-container {
-  display: inline-grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-column-gap: 20px;
-  align-items: center;
+   display: inline-grid;
+   grid-template-columns: 33% 33% 33%;
+   grid-column-gap: 20px;
+   align-items: center;
+}
+
+form {
+   background-color: #BABABA;
+   padding: 1rem;
+   text-align: center;
 }
