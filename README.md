@@ -4,4 +4,4 @@
 
 ![alt text](project-4-visual.jpg)
 ![alt text](project-4-visual-2.jpg)
-![Hill Chart](hill-chart.jpg)
+![alt text](hill-chart.jpg)
