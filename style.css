@@ -1,29 +1,61 @@
 html {
-   background-color: ;
-   font-family: ;
-   font-size: ;
+   background-color: #fff;
+   font-family: 'Lato', sans-serif;
 }
 
 body {
-   background-color: ;
-   font-family: ;
-   font-size: ;
+   background-color: #fff;
+}
+
+.info {
+   font-size: 25px;
+   line-height: 40px;
+   color: #909090;
+   border: solid 2px #909090;
+   border-radius: 50%;
+   height: 40px;
+   width: 40px;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   text-align: center;
+}
+
+.overlay {
+   font-size: 20px;
+   line-height: 25px;
+   position: absolute;
+   top: 5px;
+   right: 20px;
+   opacity: 0;
+   text-align: left;
+   transform: translate(%,%);
+   transition: .5s ease;
+   width: max-content;
+}
+
+.info:hover .overlay {
+   opacity: 1;
 }
 
 h1, h2, h3, h4 {
    color: #4D4D4D;
-   font-family: 'Lato', sans-serif;
    font-size: 1rem;
    font-weight: 400;
    text-align: center;
 }
 
-h1 {
+.h1 {
    background-color: #457664;
    color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    font-family: 'Oswald', sans-serif;
    font-size: 2rem;
    font-weight: 500;
+   height: 50px;
+   width: 600px;
 }
 
 h2 {
@@ -40,11 +72,15 @@ img:hover {
    cursor: pointer;
 }
 
-.center {
-  text-align: center;
+img:onclick {
+   opacity: 100%;
 }
 
-.grid-container {
+.center {
+   text-align: center;
+}
+
+.drink-icons {
    display: inline-grid;
    grid-template-columns: 33% 33% 33%;
    grid-column-gap: 20px;

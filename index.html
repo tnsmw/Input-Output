@@ -22,16 +22,22 @@
 
 <body>
 
-  <h1>The Starbucks Visitor</h1>
+  <div class="info">i
+    <div class="overlay">Grande Iced Coffee - $2.65<br>
+      Grande Caffè Latte - $3.65<br>Venti Matcha Frappuccino - $4.95
+    </div>
+  </div>
+
+  <div class="h1">The Starbucks Visitor</div>
 
   <h2>How much could you buy with...?</h2>
 
   <h3>Choose a drink</h3>
 
   <div class="center">
-  <div class="grid-container">
-   <img src="caffè-latte.png" alt="caffè-latte">
+  <div class="drink-icons">
    <img src="iced-coffee.png" alt="iced-coffee">
+   <img src="caffè-latte.png" alt="caffè-latte">
    <img src="matcha-frappuccino.png" alt="matcha-frappuccino">
   </div>
   </div>
@@ -40,7 +46,11 @@
 
   <form autocomplete="off">
     <label for="wallet">$</label>
-    <input type="text" name="wallet" id="wallet">
+    <input type="text" name="wallet" id="wallet" onkeyup="calculate()">
+    <label for="price">/</label>
+    <input type="text" name="price" id="price" onkeyup="calculate()">
+    <label for="result">=</label>
+    <input type="text" name="result" id="result" onkeyup="calculate()">
   </form>
 
 </body>
