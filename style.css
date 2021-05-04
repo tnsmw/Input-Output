@@ -62,20 +62,6 @@ h2 {
    color: #BABABA;
 }
 
-img {
-   width: 150px;
-   opacity: 60%;
-}
-
-img:hover {
-   opacity: 100%;
-   cursor: pointer;
-}
-
-img:onclick {
-   opacity: 100%;
-}
-
 .center {
    text-align: center;
 }
@@ -87,8 +73,72 @@ img:onclick {
    align-items: center;
 }
 
-form {
+.drink-icons {
+   grid-template-columns: repeat(3, 1fr); /* fix positioning */
+}
+ 
+/* new elements */
+fieldset {
+   border: 0;
+   outline: 0;
+   padding: 0;
+}
+ 
+legend {
+   float: left;
+   width: 100%;
+}
+ 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+ 
+.drink-img {
+   width: 150px;
+}
+ 
+.label {
+   display: block;
+   margin: 1em 0;
+}
+ 
+.drink-icons label,
+.drink-icons input {
+   cursor: pointer;
+}
+ 
+.drink-icons input {
+   position: absolute;
+   width: 0;
+   height: 0;
+   opacity: 0;
+}
+ 
+.drink-icons .drink-img {
+   opacity: 0.6;
+}
+ 
+.drink-icons label:hover .drink-img,
+.drink-icons input:hover + .drink-img,
+.drink-icons input:checked + .drink-img {
+   opacity: 1;
+}
+ 
+.text-input {
+   width: 97%;
    background-color: #BABABA;
-   padding: 1rem;
+   color: #fff;
+   padding: 1.5%;
    text-align: center;
+   font-size: 2rem;
+}
+ 
+.text-input input {
+   background-color: inherit;
+   color: inherit;
+   border: 0;
+   outline: 0;
+   -moz-appearance: textfield;
 }

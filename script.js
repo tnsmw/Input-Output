@@ -1,82 +1,33 @@
 
-function iced () {
-   var input2 = document.querySelector('#price');
-   input2.value = 2.65;
-   document.querySelector("#iced-coffee").style.opacity = 1;
-   document.querySelector("#caffe-latte").style.opacity = .5;
-   document.querySelector("#matcha-frappuccino").style.opacity = .5;
-}
-
-function latte () {
-   var input2 = document.querySelector('#price');
-   input2.value = 3.65;
-   document.querySelector("#caffe-latte").style.opacity = 1;
-   document.querySelector("#iced-coffee").style.opacity = .5;
-   document.querySelector("#matcha-frappuccino").style.opacity = .5;
-}
-
-function frapp () {
-   var input2 = document.querySelector('#price');
-   input2.value = 4.95;
-   document.querySelector("#matcha-frappuccino").style.opacity = 1;
-   document.querySelector("#iced-coffee").style.opacity = .5;
-   document.querySelector("#caffe-latte").style.opacity = .5;
-}
-
-function calculate () {
-  var input1 = document.querySelector('#wallet').value;
-  var input2 = document.querySelector('#price').value;
-  if (input1 && input2) {
-    document.querySelector('#result').value = Math.floor(input1 / input2);
-  }
-}
-
-/*function showdrinks () {
-   console.log("showdrinks");
-   // if input2.value = 3.65
-   // var image
-   // get total
-   // show images depending on total (4 loop?)
-
-   var i;
-   for (i = 0; i < 4; i++) {
-   text += "The number is " + i + "<br>";
-}
-}
-
-function show_image(src, width, height, alt) {
-    var img = document.createElement("img");
-    img.src = "iced-coffee.png";
-    img.width = 50;
-    img.height = 50;
-    img.alt = drink;
-
-    // This next line will just add it to the <body> tag
-    document.body.appendChild(img);*/
-
-function showDrinks() {
-    let result = +document.getElementById('#result').value; // take value as a number
-    let drinks = document.getElementById('#amount');
-
-    if (isNaN(result) || result < 1) { // move exit condition to top and exit early
-        alert("Not enough money.")
+document.querySelector('#buy-drinks').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const selectedDrink = this.querySelector('[name="drink"]:checked');
+    const drinkSlug = selectedDrink.value;
+    const drinkPrice = Number(selectedDrink.dataset.price);
+    const moneyHeld = Number(this.querySelector('[name="money"]').value);
+    if (isNaN(moneyHeld) || moneyHeld < drinkPrice) {
+        alert('Not enough money');
         return;
     }
-
-   var showDrinks = document.createElement("img");
-   document.querySelector(".container").append(showDrinks);
-   
-   switch(input2){
-      case 2.65:
-         showDrinks.img.src = "iced-coffee.png";
-         break;
-      case 3.65:
-         showDrinks.img.src = "caffè-latte.png";
-         break;
-      case 4.95:
-         showDrinks.img.src = "matcha-frappuccino.png";
-         break;
-   }
-
-
+    showDrinks(Math.round(moneyHeld / drinkPrice), drinkSlug);
+});
+ 
+function showDrinks(amount, drink) {
+    clearElement(document.querySelector('#amount'));
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < amount; i++) {
+        const img = document.createElement('img');
+        img.src = `${drink}.png`;
+        img.alt = '';
+        img.width = 100;
+        img.height = 100;
+        fragment.appendChild(img);
+    }
+    document.querySelector('#amount').appendChild(fragment);
+}
+ 
+function clearElement(element) {
+    while (element.childNodes.length > 0) {
+        element.removeChild(element.firstChild);
+    }
 }

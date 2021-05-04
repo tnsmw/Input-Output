@@ -32,28 +32,28 @@
 
   <h2>How much could you buy with...?</h2>
 
-  <h3>Choose a drink</h3>
-
-  <div class="center">
-  <div class="drink-icons">
-   <img src="iced-coffee.png" alt="iced-coffee" 
-   id="iced-coffee" onclick="iced()">
-   <img src="caffè-latte.png" alt="caffe-latte" 
-   id="caffe-latte" onclick="latte()">
-   <img src="matcha-frappuccino.png" alt="matcha-frappuccino" 
-   id="matcha-frappuccino" onclick="frapp()">
-  </div>
-  </div>
-
-  <h4>Input your amount of money</h4>
-
-  <form autocomplete="off">
-    <label for="wallet">$</label>
-    <input type="text" name="wallet" id="wallet" onkeyup="calculate()">
-    <label for="price">/</label>
-    <input type="text" name="price" id="price" onkeyup="calculate()">
-    <label for="result">= # of drinks:</label>
-    <input type="text" name="result" id="result" onkeyup="calculate()">
+  <form id="buy-drinks" class="center" autocomplete="off">
+      <fieldset>
+          <legend class="label">Choose a drink</legend>
+          <div class="drink-icons">
+              <label>
+                  <input type="radio" name="drink" value="iced-coffee" data-name="Grande Iced Coffee" data-price="2.65" checked>
+                  <img class="drink-img" src="iced-coffee.png" alt="Iced coffee">
+              </label>
+              <label>
+                  <input type="radio" name="drink" value="caffè-latte" data-name="Grande Caffè Latte" data-price="3.65">
+                  <img class="drink-img" src="caffè-latte.png" alt="Caffè Latte">
+              </label>
+              <label>
+                  <input type="radio" name="drink" value="matcha-frappuccino" data-name="Venti Matcha Frappuccino" data-price="4.95">
+                  <img class="drink-img" src="matcha-frappuccino.png" alt="Matcha Frappuccino">
+              </label>
+          </div>
+      </fieldset>
+      <label class="label" for="wallet">Input your amount of money</label>
+      <div class="text-input">
+          $ <input type="number" name="money" id="wallet" placeholder="0" required>
+      </div>
   </form>
 
   <div class="container" id="amount"></div>
