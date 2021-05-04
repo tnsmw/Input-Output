@@ -27,8 +27,7 @@ function calculate () {
   var input1 = document.querySelector('#wallet').value;
   var input2 = document.querySelector('#price').value;
   if (input1 && input2) {
-    document.querySelector('#result').value = (input1 / input2).toFixed(2);
-    showdrinks()
+    document.querySelector('#result').value = Math.floor(input1 / input2);
   }
 }
 
@@ -59,19 +58,20 @@ function showDrinks() {
         return;
     }
 
-/*   var showDrinks = document.createElement("img");
+   var showDrinks = document.createElement("img");
    document.querySelector(".container").append(showDrinks);
-   if input2.value = 2.65 {
-      showDrinks.img.src = "iced-coffee.png";
+   
+   switch(result){
+      case 2.65:
+         showDrinks.img.src = "iced-coffee.png";
+         break;
+      case 3.65:
+         showDrinks.img.src = "caffè-latte.png";
+         break;
+      case 4.95:
+         showDrinks.img.src = "matcha-frappuccino.png";
+         break;
    }
-   if input2.value = 3.65 {
-      showDrinks.img.src = "caffè-latte.png";
-   }
-   if input2.value = 4.95 {
-      showDrinks.img.src = "matcha-frappuccino.png";
-   }
-   for (var i = 0; i <= 5; i++) {
 
-   }
-*/
+
 }
