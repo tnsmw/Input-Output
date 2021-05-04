@@ -61,7 +61,7 @@ function showDrinks() {
    var showDrinks = document.createElement("img");
    document.querySelector(".container").append(showDrinks);
    
-   switch(result){
+   switch(input2){
       case 2.65:
          showDrinks.img.src = "iced-coffee.png";
          break;
