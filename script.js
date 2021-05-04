@@ -37,6 +37,11 @@ function calculate () {
    // var image
    // get total
    // show images depending on total (4 loop?)
+
+   var i;
+   for (i = 0; i < 4; i++) {
+   text += "The number is " + i + "<br>";
+}
 }
 
 function show_image(src, width, height, alt) {
@@ -50,8 +55,8 @@ function show_image(src, width, height, alt) {
     document.body.appendChild(img);*/
 
 function showDrinks() {
-    let result = +document.getElementById('result').value; // take value as a number
-    let drinks = document.getElementById('amount');
+    let result = +document.getElementById('#result').value; // take value as a number
+    let drinks = document.getElementById('#amount');
 
     if (isNaN(result) || result < 1) { // move exit condition to top and exit early
         alert("Not enough money.")

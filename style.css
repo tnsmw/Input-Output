@@ -10,25 +10,25 @@ body {
 .info {
    font-size: 25px;
    line-height: 40px;
-   color: #909090;
-   border: solid 2px #909090;
+   color: #fff;
+   border: solid 2px #fff;
    border-radius: 50%;
    height: 40px;
    width: 40px;
    position: absolute;
-   top: 20px;
+   top: 19px;
    right: 20px;
    text-align: center;
 }
 
 .overlay {
-   font-size: 20px;
-   line-height: 25px;
+   font-size: 15px;
+   line-height: 18px;
    position: absolute;
-   top: 5px;
-   right: 20px;
+   top: -5px;
+   right: 60px;
    opacity: 0;
-   text-align: left;
+   text-align: right;
    transition: .5s ease;
    width: max-content;
 }
@@ -53,10 +53,9 @@ h1, h2, h3, h4 {
    font-family: 'Oswald', sans-serif;
    font-size: 2rem;
    font-weight: 500;
-   height: 50px;
-   width: 600px;
-   margin-top: 20px;
-   margin-left: 30%;
+   height: 80px;
+   width: 100%;
+   margin-top: 0px;
 }
 
 h2 {
