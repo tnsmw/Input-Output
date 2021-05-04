@@ -38,8 +38,17 @@ function calculate () {
    // var image
    // get total
    // show images depending on total (4 loop?)
-}*/
+}
 
+function show_image(src, width, height, alt) {
+    var img = document.createElement("img");
+    img.src = "iced-coffee.png";
+    img.width = 50;
+    img.height = 50;
+    img.alt = drink;
+
+    // This next line will just add it to the <body> tag
+    document.body.appendChild(img);*/
 
 function showDrinks() {
     let result = +document.getElementById('result').value; // take value as a number
