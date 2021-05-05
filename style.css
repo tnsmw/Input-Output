@@ -54,8 +54,6 @@ h1, h2, h3, h4 {
    font-size: 2rem;
    font-weight: 500;
    height: 80px;
-   width: 100%;
-   margin-top: 0px;
 }
 
 h2 {
@@ -68,16 +66,16 @@ h2 {
 
 .drink-icons {
    display: inline-grid;
-   grid-template-columns: 33% 33% 33%;
-   grid-column-gap: 20px;
+   grid-template-columns: repeat(3, 1fr);
+   grid-column-gap: 30px;
    align-items: center;
 }
 
-.drink-icons {
-   grid-template-columns: repeat(3, 1fr); /* fix positioning */
+
+img {
+   border: solid 2px #fff;
 }
- 
-/* new elements */
+
 fieldset {
    border: 0;
    outline: 0;
@@ -127,16 +125,15 @@ input::-webkit-inner-spin-button {
 }
  
 .text-input {
-   width: 97%;
    background-color: #BABABA;
-   color: #fff;
-   padding: 1.5%;
+   color: #000;
+   padding: 1vw;
    text-align: center;
    font-size: 2rem;
 }
  
 .text-input input {
-   background-color: inherit;
+   background-color: #fff;
    color: inherit;
    border: 0;
    outline: 0;
